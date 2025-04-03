@@ -2,9 +2,11 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import ani from "@/public/ani.png";
+import helli from "@/public/helli.png";
+import cadd from "@/public/cadd.png";
+import codelib from "@/public/codelib.png";
+import quiz from "@/public/quiz.png";
 
 export const links = [
   {
@@ -35,52 +37,67 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Full Stack Developer",
+    location: "IIT Delhi",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Working as a Full Stack Developer Intern, gaining expertise in both front-end and back-end technologies.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2025",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Software Engineer",
+    location: "Gurugram, Haryana",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I worked as a Software Engineer Intern for 6 months, where I honed my skills, expanding my expertise across the entire development stack.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2024 - 2024",
+  },
+  {
+    title: "Freelance Developer",
+    location: "Delhi",
+    description:
+    "As a freelance full-stack developer, I leverage technologies like React, Next.js, TypeScript, Tailwind, Prisma, and MongoDB to build robust applications for clients. In my free time, I enjoy working on personal projects and exploring new technologies.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023 - present",
   },
 ] as const;
 
+
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Quiz Set",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "QuizSet is a quiz-taking platform featuring auto-check functionality and live tracking of quiz participants, ensuring real-time monitoring of who has access and whether their links are active.",
+    // tags: ["Angular", "Firebase", "Tailwind", "Material UI", "Bitly", "Embla Carousel", "Typescript", "Github", "Docker"],
+    imageUrl: quiz,
   },
   {
-    title: "rmtDev",
+    title: "Helli Studio",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Helli Studio is an IT services platform built for my client, providing various technology solutions and services tailored to their needs.",
+    // tags: ["Next.js", "MongoDB", "Tailwind", "Material UI", "Figma", "Embla Carousel", "Typescript"],
+    imageUrl: helli,
   },
   {
-    title: "Word Analytics",
+    title: "Cadd Manchester",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Cadd Manchester is an educational academy web platform designed to showcase various courses. I built this project for my client to enhance their online presence.",
+    // tags: ["React", "TypeScript", "Tailwind"],
+    imageUrl: cadd,
+  },
+  {
+    title: "AniBowl",
+    description:
+      "AniBowl is a fundraising platform dedicated to feeding street animals, allowing users to make donations and share their stories about animal welfare.",
+    // tags: ["Angular", "MongoDB", "Tailwind", "Typescript", "Razorpay", "Material UI"],
+    imageUrl: ani,
+  },
+  {
+    title: "Codelib",
+    description:
+      "Codelib is an educational community platform where users can share code snippets, solutions to various questions, and access free notes for their studies.",
+    tags: ["Angular", "Typescript", "Tailwind", "Firebase"],
+    imageUrl: codelib,
   },
 ] as const;
 
@@ -94,14 +111,15 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
+  "Firebase",
   "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
+  "MySQL",
+  "Framer",
+  "Arduino",
   "Express",
-  "PostgreSQL",
+  "Docker",
   "Python",
-  "Django",
+  "Angular",
   "Framer Motion",
+  "TypeScript",
 ] as const;
