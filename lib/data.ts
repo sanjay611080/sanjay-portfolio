@@ -7,6 +7,7 @@ import helli from "@/public/helli.png";
 import cadd from "@/public/cadd.png";
 import codelib from "@/public/codelib.png";
 import quiz from "@/public/quiz.png";
+import { link } from "fs";
 
 export const links = [
   {
@@ -70,6 +71,7 @@ export const projectsData = [
       "QuizSet is a quiz-taking platform featuring auto-check functionality and live tracking of quiz participants, ensuring real-time monitoring of who has access and whether their links are active.",
     // tags: ["Angular", "Firebase", "Tailwind", "Material UI", "Bitly", "Embla Carousel", "Typescript", "Github", "Docker"],
     imageUrl: quiz,
+    link: "https://quizset.vercel.app/",
   },
   {
     title: "Helli Studio",
@@ -77,6 +79,7 @@ export const projectsData = [
       "Helli Studio is an IT services platform built for my client, providing various technology solutions and services tailored to their needs.",
     // tags: ["Next.js", "MongoDB", "Tailwind", "Material UI", "Figma", "Embla Carousel", "Typescript"],
     imageUrl: helli,
+    link: "https://hellistudios.vercel.app/",
   },
   {
     title: "Cadd Manchester",
@@ -84,6 +87,7 @@ export const projectsData = [
       "Cadd Manchester is an educational academy web platform designed to showcase various courses. I built this project for my client to enhance their online presence.",
     // tags: ["React", "TypeScript", "Tailwind"],
     imageUrl: cadd,
+    link: "https://cadd-manchester.vercel.app/",
   },
   {
     title: "AniBowl",
@@ -91,6 +95,7 @@ export const projectsData = [
       "AniBowl is a fundraising platform dedicated to feeding street animals, allowing users to make donations and share their stories about animal welfare.",
     // tags: ["Angular", "MongoDB", "Tailwind", "Typescript", "Razorpay", "Material UI"],
     imageUrl: ani,
+    link: "https://ani-bowl.vercel.app/",
   },
   {
     title: "Codelib",
@@ -98,6 +103,7 @@ export const projectsData = [
       "Codelib is an educational community platform where users can share code snippets, solutions to various questions, and access free notes for their studies.",
     tags: ["Angular", "Typescript", "Tailwind", "Firebase"],
     imageUrl: codelib,
+    link: "https://code-lib.vercel.app/",
   },
 ] as const;
 
