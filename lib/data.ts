@@ -7,6 +7,7 @@ import helli from "@/public/helli.png";
 import cadd from "@/public/cadd.png";
 import codelib from "@/public/codelib.png";
 import quiz from "@/public/quiz.png";
+import minischool from "@/public/minischool.png";
 import { link } from "fs";
 
 export const links = [
@@ -38,10 +39,10 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Full Stack Developer",
+    title: "Junior Software Engineer",
     location: "IIT Delhi",
     description:
-      "Working as a Full Stack Developer Intern, gaining expertise in both front-end and back-end technologies.",
+      "Working as a Software Engineer Intern, gaining expertise in both front-end and back-end technologies.",
     icon: React.createElement(CgWorkAlt),
     date: "2025",
   },
@@ -57,7 +58,7 @@ export const experiencesData = [
     title: "Freelance Developer",
     location: "Delhi",
     description:
-    "As a freelance full-stack developer, I leverage technologies like React, Next.js, TypeScript, Tailwind, Prisma, and MongoDB to build robust applications for clients. In my free time, I enjoy working on personal projects and exploring new technologies.",
+      "As a freelance full-stack developer, I leverage technologies like React, Next.js, TypeScript, Tailwind, Prisma, and MongoDB to build robust applications for clients. In my free time, I enjoy working on personal projects and exploring new technologies.",
     icon: React.createElement(FaReact),
     date: "2023 - present",
   },
@@ -65,6 +66,14 @@ export const experiencesData = [
 
 
 export const projectsData = [
+  {
+    title: "Minischool",
+    description:
+      "Minischool is an online learning platform designed to make distance education more engaging and accessible. It offers complete courses, study resources, quizzes, assignments, and progress tracking—providing a smooth and interactive learning experience for students.",
+    imageUrl: minischool,
+    link: "http://minischool.site/",
+  },
+
   {
     title: "Quiz Set",
     description:

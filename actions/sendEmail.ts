@@ -1,47 +1,39 @@
 "use server";
 
-import React from "react";
-import { Resend } from "resend";
-import { validateString, getErrorMessage } from "@/lib/utils";
-import ContactFormEmail from "@/email/contact-form-email";
+export async function sendEmail(formData: FormData) {
+  const senderEmail = formData.get("senderEmail") as string;
+  const message = formData.get("message") as string;
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+  // ---- OPTIONAL: your existing email sending logic ----
+  // const { data, error } = await resend.emails.send({
+  //   from: "Portfolio Contact <onboarding@resend.dev>",
+  //   to: "youremail@gmail.com",
+  //   subject: "New Contact Form Message",
+  //   text: `From: ${senderEmail}\n\nMessage:\n${message}`
+  // });
 
-export const sendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get("senderEmail");
-  const message = formData.get("message");
+  // if (error) {
+  //   return { error: "Failed to send email." };
+  // }
 
-  // simple server-side validation
-  if (!validateString(senderEmail, 500)) {
-    return {
-      error: "Invalid sender email",
-    };
-  }
-  if (!validateString(message, 5000)) {
-    return {
-      error: "Invalid message",
-    };
-  }
-
-  let data;
+  // ---- SEND DATA TO GOOGLE SHEETS ----
   try {
-    data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: "sanjayvermaa12121@gmail.com",
-      subject: "Message from contact form",
-      reply_to: senderEmail,
-      react: React.createElement(ContactFormEmail, {
-        message: message,
-        senderEmail: senderEmail,
-      }),
-    });
-  } catch (error: unknown) {
-    return {
-      error: getErrorMessage(error),
-    };
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbz7wHI94h3k7WcJSmpQ8lOTeivNAIyuFDPoTUf7kiczinedMVrIQGN8PEmZzZHRF5PoEA/exec",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: senderEmail,
+          message: message,
+        }),
+      }
+    );
+  } catch (err) {
+    return { error: "Failed to save to Google Sheet." };
   }
 
-  return {
-    data,
-  };
-};
+  return { data: "ok" };
+}
